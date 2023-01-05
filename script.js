@@ -8,6 +8,7 @@ let numeros = document.querySelector('.d-1--numeros');
 let etapaAtual = 0;
 let numero = '';
 let votoBranco = false;
+let fim = false;
 
 function comecarEtapa() {
     let etapa = etapas[etapaAtual];
@@ -92,35 +93,47 @@ function branco() {
         numeros.innerHTML = '';
         descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>'
 
+    } else if(fim) {
+        alert('Voce ja finalizou sua votação');
     } else {
         alert('Para votar em BRANCO, não pode ter digitado nenhum número!');
     }
 }
 function corrige() {
-    comecarEtapa();
+    if(fim) {
+        alert('Voce ja finalizou sua votação');
+    } else {
+        comecarEtapa();
+    }
+    
 }
 function confirma() {
-    let etapa = etapas[etapaAtual];
-    let votoConf = false;
-
-    if(votoBranco === true) {
-        votoConf = true;
-    } else if(numero.length === etapa.numeros) {
-        votoConf = true;
+    if(fim) {
+        alert('Voce ja finalizou sua votação');
     } else {
-        alert('Não pode confirmar');
-    }
-
-    if(votoConf) {
-        etapaAtual++;
-        if(etapas[etapaAtual] != undefined) {
-            comecarEtapa();
+        let etapa = etapas[etapaAtual];
+        let votoConf = false;
+    
+        if(votoBranco === true) {
+            votoConf = true;
+        } else if(numero.length === etapa.numeros) {
+            votoConf = true;
         } else {
-            // etapaAtual = 0;
-            // comecarEtapa();
-            document.querySelector('.tela').innerHTML = `<div class="aviso--gigante pisca">FIM</div>`
+            alert('Não pode confirmar');
         }
-        
+    
+        if(votoConf) {
+            etapaAtual++;
+            if(etapas[etapaAtual] != undefined) {
+                comecarEtapa();
+            } else {
+                // etapaAtual = 0;
+                // comecarEtapa();
+                document.querySelector('.tela').innerHTML = `<div class="aviso--grande pisca">FIM</div>`;
+                fim = true;
+            }
+        }
     }
+    
 }
 comecarEtapa();

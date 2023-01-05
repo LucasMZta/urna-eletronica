@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 .aviso--gigante {
@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 70px;
+    font-size: 4.375rem;
     font-weight: 600;
 }
 .urna {
@@ -40,7 +40,7 @@ body {
     display: flex;
 }
 .tela {
-    width: 500px;
+    width: 31.25rem;
     background: linear-gradient(to right, #E8e8e8, #c1c1c1);
     border: 2px solid #999;
     display: flex;
@@ -58,16 +58,16 @@ body {
     flex-direction: column;
 }
 .d-1--text {
-    height: 50px;
-    line-height: 50px;
+    height: 3.125rem;
+    line-height: 3.125rem;
 }
 .d-1--cargo {
-    height: 50px;
-    line-height: 50px;
+    height: 3.125rem;
+    line-height: 3.125rem;
     text-align: center;
 }
 .d-1--numeros {
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     align-items: center;
 }
@@ -77,11 +77,11 @@ body {
 .d-1--numeros .numero {
     display: inline-block;
     border: 1px solid #000;
-    width: 40px;
+    width: 2.5rem;
     margin: 5px 0px;
-    height: 40px;
+    height: 2.5rem;
     text-align: center;
-    line-height: 40px;
+    line-height: 2.5rem;
     font-size: 1.5rem;
 }
 .d-1--complemento {
@@ -91,7 +91,7 @@ body {
 
 
 .d-1--right {
-    width: 100px;
+    width: 6.25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -100,7 +100,7 @@ body {
     border: 1px solid #444;
     background-color: #FFF;
     text-align: center;
-    font-size: 14px;
+    font-size: .875rem;
 }
 .d-1--image img{
     width: 100%;
@@ -113,7 +113,7 @@ body {
 }
 .d-1--image.small {
     width: 70%;
-    font-size: 12px;
+    font-size: .75rem;
     margin-top: 5px;
 }
 .d-2 {
@@ -121,7 +121,7 @@ body {
     border-top: 2px solid #444;
 }
 .teclado {
-    max-width: 320px;
+    max-width: 20rem;
     background-color: #282525;
     margin-left: 2rem;
     padding: 1rem;
@@ -136,13 +136,13 @@ body {
     font-size: 1.5rem;
 }
 .teclado--linha.opcoes .teclado--botao {
-    width: 90px;
+    width: 5.625rem;
     font-size: .95rem;
     font-weight: 600;
 }
 .teclado--botao {
-    width: 75px;
-    height: 50px;
+    width: 4.6875rem;
+    height: 3.125rem;
     background-color: #000;
     color: #FFF;
     display: flex;
@@ -177,6 +177,34 @@ body {
 }
 .btn--confirma:hover {
     background-color: #1d8e4c;
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    .urna {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tela, .teclado {
+        flex: 1;
+    }
+    .tela {
+        max-width: 20rem;
+        padding: 0.89rem;
+        min-height: 23.75rem;
+        
+        display: flex;
+        justify-content: center;
+    }
+    .d-1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .teclado {
+        margin: 0;
+    }
 }
 
 
