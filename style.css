@@ -18,6 +18,22 @@ body {
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
+.aviso--grande {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+.aviso--gigante {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: 600;
+}
 .urna {
     background-color: #dbd5c9;
     padding: 2rem;
@@ -52,7 +68,11 @@ body {
 }
 .d-1--numeros {
     height: 50px;
-    line-height: 35px;
+    display: flex;
+    align-items: center;
+}
+.d-1--numeros span {
+    margin-right: 5px;
 }
 .d-1--numeros .numero {
     display: inline-block;
@@ -141,13 +161,22 @@ body {
     background-color: #FFF;
     color: #000;
 }
+.btn--branco:hover {
+    background-color: #aaa;
+}
 .btn--corrige {
     background-color: #F09046;
     color: #000;
 }
+.btn--corrige:hover {
+    background-color: #f46f09;
+}
 .btn--confirma {
     background-color: #48C079;
     color: #000;
+}
+.btn--confirma:hover {
+    background-color: #1d8e4c;
 }
 
 
